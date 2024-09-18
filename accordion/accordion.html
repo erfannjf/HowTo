@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" intial-scale="1.0" />
+        <title>Accordion</title>
+        <style>
+            .accordion {
+                background-color:#e6e6e6;
+                color:#444;
+                cursor:pointer;
+                padding:18px;
+                width:100%;
+                text-align:left;
+                border: 1px solid black;
+                outline:none;
+                transition: 0.4s;
+            }
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+            .panel{
+                padding: 0 18px;
+                background-color:#fff;
+                display: none;
+                overflow:hidden;
+                transition: max-height 0.2s ease-out;
+            }
+            .accordion::after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;;
+            }
+            .active::after {
+                content: "\2796";
+            }
+        </style>
+    </head>
+    <body>
+        <button class="accordion">part 1</button>
+        <div class="panel">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+        <button class="accordion">part 2</button>
+        <div class="panel">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+        <button class="accordion">part 3</button>
+        <div class="panel">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script>
+
+    </body>
+</html>

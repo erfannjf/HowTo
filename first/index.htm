@@ -1,3 +1,40 @@
 <html>
-    
+    <head>
+        <meta name="viewport" content="width=device-width" intial-scale="1.0" />
+        <title>IconBar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {margin:0;}
+            .icon-bar{
+                width:100%;
+                overflow: auto;
+                background-color:#595959;                ;
+            }
+            .icon-bar a {
+                float:left;
+                width: 20%;
+                text-align: center;
+                padding: 12px 0;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 36px;
+            }
+            .icon-bar a:hover{
+                background-color: yellow;
+            }
+            .active{
+                background-color:#00cc00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="icon-bar">
+            <a class="active" href="#"><i class="fa fa-home"></i></a> 
+            <a href="#"><i class="fa fa-search"></i></a> 
+            <a href="#"><i class="fa fa-envelope"></i></a> 
+            <a href="#"><i class="fa fa-globe"></i></a>
+            <a href="#"><i class="fa fa-trash"></i></a> 
+        </div>
+    </body>
+
 </html>
