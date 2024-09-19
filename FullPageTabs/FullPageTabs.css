@@ -2,6 +2,7 @@ body{
     height: 1000px;
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 .tablink{
     float: left;
