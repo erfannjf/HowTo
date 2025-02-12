@@ -21,16 +21,17 @@
             .panel{
                 padding: 0 18px;
                 background-color:#fff;
-                display: none;
+                display: block;
                 overflow:hidden;
-                transition: max-height 0.2s ease-out;
+                height: 0;
+                transition: all 0.2s ease-out;
             }
             .accordion::after {
                 content: '\002B';
                 color: #777;
                 font-weight: bold;
                 float: right;
-                margin-left: 5px;;
+                margin-left: 5px;
             }
             .active::after {
                 content: "\2796";
@@ -60,8 +61,10 @@
                 var panel = this.nextElementSibling;
                 if (panel.style.display === "block") {
                   panel.style.display = "none";
+                  panel.style.height = "0px"
                 } else {
-                  panel.style.display = "block";
+                    panel.style.display = "block";
+                    panel.style.height = "50px"
                 }
               });
             }
